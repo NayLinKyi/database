@@ -7,7 +7,6 @@ $title = 'Create new note';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    require('Database.php');
 
     $config = require('config.php');
 
@@ -31,4 +30,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-require('view/note-create.view.php');
+require('view/notes/create.view.php');

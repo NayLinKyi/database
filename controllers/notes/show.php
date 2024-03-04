@@ -1,6 +1,5 @@
 <?php
 
-require('Database.php');
 
 $config = require('config.php');
 
@@ -13,5 +12,5 @@ authorize($note['user_id'] === 1, 403);
 $heading = 'Note';
 $title = "Note";
 
-require('view/note.view.php');
+require('view/notes/show.view.php');
 

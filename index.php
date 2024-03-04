@@ -1,9 +1,12 @@
 <?php
 
-require('functions.php');
-require('Database.php');
-require('router.php');
+spl_autoload_register(function ($class) {
+    require("$class.php");
+});
 
+
+require('functions.php');
+require('router.php');
 
 // $config = require('config.php');
 

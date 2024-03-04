@@ -9,8 +9,8 @@ class Database
     {
         $dsn = "mysql:host={$config['host']};port={$config['port']};dbname={$config['dbname']};";
 
-        $this->connection = new PDO($dsn, $config['user'], '' , [
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+        $this->connection = new \PDO($dsn, $config['user'], '' , [
+            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC
         ]);
     }
 
