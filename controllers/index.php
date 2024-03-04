@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $config = require('config.php');
         $db = new Database($config['database']);
 
-        $check = $db->query("SELECT * FROM users WHERE name=:id", ['id' => $name])->fetch();
+        $check = $db->query("SELECT * FROM users WHERE name=:id", ['id' => $name])->findOrFail();
         if(password_verify($password, $check['password'])){
             header('Location: /home');
         }

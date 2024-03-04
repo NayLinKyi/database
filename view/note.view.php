@@ -9,7 +9,7 @@ require ('partial/banner.view.php');
 
     <a href="/notes">back to all notes</a>
 
-    <h3><?= $note['body'] ?></h3>
+    <h3><?= htmlspecialchars($note['body'])  ?></h3>
 
 </main>
 

@@ -11,5 +11,5 @@ $db = new Database($config['database']);
 $posts = $db->query("select * from posts where id = :id and title = :title", [
     'title' => 'Third post',
     'id' => 3
-])->fetchAll();
+])->get();
 

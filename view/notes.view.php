@@ -10,9 +10,11 @@ require ('partial/banner.view.php');
 
     <?php foreach($notes as $note) : ?>
         <a href="/note?id=<?= $note['id'] ?>">
-            <li><?= $note['body'] ?></li>
+            <li><?= htmlspecialchars($note['body'])  ?></li>
         </a>
     <?php endforeach ?>
+
+    <a href="/notes/create">Create new note</a>
 
 </main>
 
