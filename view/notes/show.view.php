@@ -11,7 +11,8 @@ require ('view/partial/banner.view.php');
 
     <h3><?= htmlspecialchars($note['body'])  ?></h3>
 
-    <form method="POST">
+    <form action="/note" method="POST">
+        <input type="hidden" name="method" value="delete">
         <input type="hidden" name="id" value="<?= $note['id'] ?>">
         <button type="submit" class="btn btn-sm btn-danger">Delete</button>
     </form>

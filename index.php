@@ -4,12 +4,12 @@ spl_autoload_register(function ($class) {
     require("$class.php");
 });
 
-
 require('functions.php');
 require('router.php');
 
-// $config = require('config.php');
+$routes = require('routes.php');
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+$method = $_POST['method'] ?? $_SERVER['REQUEST_METHOD'];
 
-// $db = new Database($config['database']);
-// $post = $db->query('select * from posts where id = 2')->fetchAll();
 
+Router::route($uri, $method, $routes);

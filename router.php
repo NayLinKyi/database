@@ -1,16 +1,15 @@
 <?php
 
-$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+class Router {
 
-$routes = require('routes.php');
+    public static function route($uri, $method, $routes) {
+        foreach($routes as $route) {
+            if ($route['uri'] === $uri && $route['method'] === $method) {
+                require($route['controller']);
+                return;
+            }
+        }
 
-function routeToContoller($uri, $routes) {
-    if (array_key_exists($uri, $routes)) {
-        require($routes[$uri]);
-    } else {
         abort();
     }
 }
-
-
-routeToContoller($uri, $routes);
