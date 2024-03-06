@@ -14,6 +14,24 @@
 
 return [
     [
+        'uri' => '/',
+        'method' => 'GET',
+        'controller' => 'controllers/index.php'
+    ],
+
+    [
+        'uri' => '/home',
+        'method' => 'GET',
+        'controller' => 'controllers/home.php'
+    ],
+
+    [
+        'uri' => '/contact',
+        'method' => 'GET',
+        'controller' => 'controllers/contact.php'
+    ],
+
+    [
         'uri' => '/about',
         'method' => 'GET',
         'controller' => 'controllers/about.php'
@@ -47,6 +65,18 @@ return [
         'uri' => '/note',
         'method' => "delete",
         'controller' => 'controllers/notes/destroy.php'
+    ],
+
+    [
+        'uri' => '/note/edit',
+        'method' => "GET",
+        'controller' => 'controllers/notes/edit.php'
+    ],
+
+    [
+        'uri' => '/note',
+        'method' => "PATCH",
+        'controller' => 'controllers/notes/update.php'
     ],
 
 ];

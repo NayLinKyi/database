@@ -14,7 +14,7 @@ function abort($code = 404) {
     die();
 }
 
-function authorize($condition, $response) {
+function authorize($condition, $response = 403) {
     if (!$condition) {
         http_response_code($response);
         require("view/$response.php");

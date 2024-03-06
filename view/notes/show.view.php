@@ -16,6 +16,8 @@ require ('view/partial/banner.view.php');
         <input type="hidden" name="id" value="<?= $note['id'] ?>">
         <button type="submit" class="btn btn-sm btn-danger">Delete</button>
     </form>
+
+    <a class="btn btn-sm btn-secondary mt-2"  href="/note/edit?id=<?= $note['id'] ?>">Edit</a>
 </main>
 
 <?php require ('view/partial/footer.view.php'); ?>
