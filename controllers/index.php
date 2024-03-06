@@ -13,7 +13,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $name = $_POST['name'];
         $password = $_POST['password'] ;
 
-        echo $password;
         $config = require('config.php');
         $db = new Database($config['database']);
 
@@ -24,18 +23,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         else{
             echo "wrong user name or password";
         }
-
-        // $sql = "SELECT * FROM users WHERE ";
-    
-        // try{
-        //     mysqli_query($conn, $sql);
-        //     echo "register success!!!";
-        // }
-        // catch(mysqli_sql_exception){
-        //     echo "register fail!!!";
-        // }
-    
-        // mysqli_close($conn);
     }
     else{
         echo "FIll the form first";

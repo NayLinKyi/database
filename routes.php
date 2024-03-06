@@ -79,4 +79,16 @@ return [
         'controller' => 'controllers/notes/update.php'
     ],
 
+    [
+        'uri' => '/register',
+        'method' => "GET",
+        'controller' => 'controllers/registration/create.php'
+    ],
+
+    [
+        'uri' => '/register',
+        'method' => "POST",
+        'controller' => 'controllers/registration/store.php'
+    ],
+
 ];
