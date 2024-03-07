@@ -3,8 +3,11 @@
         <a href="/home">Home</a>
         <a href="about">About</a>
         <a href="contact">Contact</a>
-        <a href="notes">My Notes</a>
-        <a href="/">LogIn</a>
+        <?php if (isset($_SESSION['user'])) : ?>
+            <a href="notes">My Notes</a>
+        <?php endif ?>
+        
+        <!-- <a href="/">LogIn</a> -->
     </div>
 
     <?php if (isset($_SESSION['user'])) : ?>

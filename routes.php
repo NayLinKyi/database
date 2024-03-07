@@ -16,79 +16,92 @@ return [
     [
         'uri' => '/',
         'method' => 'GET',
-        'controller' => 'controllers/index.php'
+        'controller' => 'controllers/index.php',
+        'middleware' => null
     ],
 
     [
         'uri' => '/home',
         'method' => 'GET',
-        'controller' => 'controllers/home.php'
+        'controller' => 'controllers/home.php',
+        'middleware' => null
     ],
 
     [
         'uri' => '/contact',
         'method' => 'GET',
-        'controller' => 'controllers/contact.php'
+        'controller' => 'controllers/contact.php',
+        'middleware' => null
     ],
 
     [
         'uri' => '/about',
         'method' => 'GET',
-        'controller' => 'controllers/about.php'
+        'controller' => 'controllers/about.php',
+        'middleware' => null
     ],
     
     [
         'uri' => '/notes',
         'method' => 'GET',
-        'controller' => 'controllers/notes/index.php'
+        'controller' => 'controllers/notes/index.php',
+        'middleware' => 'auth'
     ],
 
     [
         'uri' => '/note',
         'method' => 'GET',
-        'controller' => 'controllers/notes/show.php'
+        'controller' => 'controllers/notes/show.php',
+        'middleware' => 'auth'
     ],
 
     [
         'uri' => '/notes/create',
         'method' => 'GET',
-        'controller' => 'controllers/notes/create.php'
+        'controller' => 'controllers/notes/create.php',
+        'middleware' => 'auth'
     ],
 
     [
         'uri' => '/notes',
         'method' => 'POST',
-        'controller' => 'controllers/notes/store.php'
+        'controller' => 'controllers/notes/store.php',
+        'middleware' => 'auth'
     ],
 
     [
         'uri' => '/note',
         'method' => "delete",
-        'controller' => 'controllers/notes/destroy.php'
+        'controller' => 'controllers/notes/destroy.php',
+        'middleware' => 'auth'
     ],
 
     [
         'uri' => '/note/edit',
         'method' => "GET",
-        'controller' => 'controllers/notes/edit.php'
+        'controller' => 'controllers/notes/edit.php',
+        'middleware' => 'auth'
     ],
 
     [
         'uri' => '/note',
         'method' => "PATCH",
-        'controller' => 'controllers/notes/update.php'
+        'controller' => 'controllers/notes/update.php',
+        'middleware' => 'auth'
     ],
 
     [
         'uri' => '/register',
         'method' => "GET",
-        'controller' => 'controllers/registration/create.php'
+        'controller' => 'controllers/registration/create.php',
+        'middleware' => 'guest'
     ],
 
     [
         'uri' => '/register',
         'method' => "POST",
-        'controller' => 'controllers/registration/store.php'
+        'controller' => 'controllers/registration/store.php',
+        'middleware' => 'guest'
     ],
 
 ];

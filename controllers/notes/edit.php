@@ -9,6 +9,6 @@ $db = new Database($config['database']);
 
 $note = $db->query('select * from notes where id = :id', ['id' => $_GET['id']])->findOrFail();
 
-authorize($note['user_id'] === 1);
+authorize($note['user_id'] == $_SESSION['user']['user_id']);
 
 require('view/notes/edit.view.php');
