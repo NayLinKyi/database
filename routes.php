@@ -104,4 +104,20 @@ return [
         'middleware' => 'guest'
     ],
 
+    [
+        'uri' => '/login',
+        'method' => "GET",
+        'controller' => 'controllers/login/create.php',
+        'middleware' => 'guest'
+    ],
+
+    [
+        'uri' => '/logout',
+        'method' => "POST",
+        'controller' => 'controllers/session/destroy.php',
+        'middleware' => 'auth'
+    ],
+
+
+
 ];

@@ -27,17 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "Register Failed!";
         }
 
-        // $sql = "INSERT INTO users (name,email,password,create_at) VALUES ('$name','$email','$password',Now())";
-
-        // try{
-        //     mysqli_query($conn, $sql);
-        //     echo "register success!!!";
-        // }
-        // catch(mysqli_sql_exception){
-        //     echo "register fail!!!";
-        // }
-
-        // mysqli_close($conn);
     } else {
         echo "FIll the form first";
     }

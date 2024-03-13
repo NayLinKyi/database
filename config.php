@@ -1,5 +1,7 @@
 <?php
 
+var_dump('heelo');
+
 return [
     'database' => [
         'host' => 'localhost',
